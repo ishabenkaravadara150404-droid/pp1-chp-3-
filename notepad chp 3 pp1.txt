@@ -1,0 +1,653 @@
+
+
+	
+	
+	
+	
+
+
+1)Write a program that input 2 values from user and find out maximum.
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a, b;
+
+    clrscr();
+
+    printf("Enter two values: ");
+    scanf("%d%d", &a, &b);
+
+    if(a > b)
+    {
+        printf("Maximum = %d", a);
+    }
+    else
+    {
+        printf("Maximum = %d", b);
+    }
+
+    getch();
+}
+
+
+ 2)write a program that input 2 values from user and find out minimum.
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a, b;
+
+    clrscr();
+
+    printf("Enter two values: ");
+    scanf("%d%d", &a, &b);
+
+    if(a < b)
+    {
+        printf("Minimum = %d", a);
+    }
+    else
+    {
+        printf("Minimum = %d", b);
+    }
+
+    getch();
+}
+
+
+ 3).write a program that input age from user if age>=18 then print person is eligible for vote else person Is not eligible for vote
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int age;
+
+    clrscr();
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    if(age >= 18)
+    {
+        printf("Person is eligible for vote");
+    }
+    else
+    {
+        printf("Person is not eligible for vote");
+    }
+
+    getch(); }
+
+
+ 4) write a program that input values from user and find out number is even or odd.
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int num;
+
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if(num % 2 == 0)
+    {
+        printf("Number is even");
+    }
+    else
+    {
+        printf("Number is odd");
+    }
+
+    getch();
+}
+
+
+ 5) write a program that input values from user and find out number equal or not.
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a, b;
+
+    clrscr();
+
+    printf("Enter two values: ");
+    scanf("%d%d", &a, &b);
+
+    if(a == b)
+    {
+        printf("Both numbers are equal");
+    }
+    else
+    {
+        printf("Both numbers are not equal");
+    }
+
+    getch();
+}
+
+
+ 6) Write a program that Input Salary From the user if
+salary Greater than or equal to 5000 then hr=5% of
+basic salary, ta=6% of basic salary, da=4% of basic
+salary and pf=5% of basic salary. but if salary is less
+than 5000 then hra=4%,ta=5%,da=3% and
+pf=4%.find out gross salary. printhra,ta,da,pf and
+gross salary(Hint : take all variable as float.formula
+for gross salary=salary+hra+ta+da- pf).
+ #include<stdio.h> 
+#include<conio.h>
+
+void main()
+{
+    float salary,hra,ta,da,pf,gross;
+
+    clrscr();
+
+    printf("Enter Basic Salary: ");
+    scanf("%f",&salary);
+
+    if(salary>=5000)
+    {
+        hra=salary*5/100;
+        ta=salary*6/100;
+        da=salary*4/100;
+        pf=salary*5/100;
+    }
+    else
+    {
+        hra=salary*4/100;
+        ta=salary*5/100;
+        da=salary*3/100;
+        pf=salary*4/100;
+    }
+
+    gross=salary+hra+ta+da-pf;
+
+    printf("\nHRA = %.2f",hra);
+    printf("\nTA = %.2f",ta);
+    printf("\nDA = %.2f",da);
+    printf("\nPF = %.2f",pf);
+    printf("\nGross Salary = %.2f",gross);
+
+    getch();
+}
+
+ 7) Write a C Program to input price quantity of an
+item from user and display final payment according to
+following condition.
+If total purchase(price*quantity) is greater than
+Rs.1000 then calculate discount 15% otherwise
+calculate discount 10% of total rupees.
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    float price, quantity, total, discount, finalpayment;
+
+    clrscr();
+
+    printf("Enter price of item: ");
+    scanf("%f",&price);
+
+    printf("Enter quantity: ");
+    scanf("%f",&quantity);
+
+    total = price * quantity;
+
+    if(total > 1000)
+    {
+        discount = total * 15 / 100;
+    }
+    else
+    {
+        discount = total * 10 / 100;
+    }
+
+    finalpayment = total - discount;
+
+    printf("\nTotal Purchase = %.2f",total);
+    printf("\nDiscount = %.2f",discount);
+    printf("\nFinal Payment = %.2f",finalpayment);
+
+    getch();
+}
+
+ 8) Write a program to input year and find whether
+year is leap year or not.(Hint Use % Sign)
+9. Write a program to input two values from user and
+check whether the first number is divisible by second
+or not. (Hint Use % Sign)
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int year;
+
+    clrscr();
+
+    printf("Enter year: ");
+    scanf("%d",&year);
+
+    if(year%400==0 || (year%4==0 && year%100!=0))
+    {
+        printf("Year is Leap Year");
+    }
+    else
+    {
+        printf("Year is Not Leap Year");
+    }
+
+    getch();
+}
+
+ 9)  Write a program to input two values from user and
+check whether the first number is divisible by second
+or not. (Hint Use % Sign)
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a,b;
+
+    clrscr();
+
+    printf("Enter first number: ");
+    scanf("%d",&a);
+
+    printf("Enter second number: ");
+    scanf("%d",&b);
+
+    if(b!=0 && a%b==0)
+    {
+        printf("First number is divisible by second number");
+    }
+    else
+    {
+        printf("First number is not divisible by second number");
+    }
+
+    getch();
+}
+
+ 10) Write a program to Input a character, if it is
+capital convert into small else convert into capital.
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    char ch;
+
+    clrscr();
+
+    printf("Enter a character: ");
+    scanf("%c",&ch);
+
+    if(ch>='A' && ch<='Z')
+    {
+        ch=ch+32;
+        printf("Small character = %c",ch);
+    }
+    else
+    {
+        ch=ch-32;
+        printf("Capital character = %c",ch);
+    }
+
+    getch();
+}
+
+
+ 11) Write a program that input one character from
+user and find out that character is vowel or not.(aeiou
+is called vowel).
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    char ch;
+
+    clrscr();
+
+    printf("Enter a character: ");
+    scanf("%c",&ch);
+
+    if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' ||
+       ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')
+    {
+        printf("Character is Vowel");
+    }
+    else
+    {
+        printf("Character is Not Vowel");
+    }
+
+    getch();
+}
+
+12. Write programs that find out character is in
+uppercase or lowercase.
+Using If...Else..If or Switch.. Case
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    char ch;
+
+    clrscr();
+
+    printf("Enter a character: ");
+    scanf("%c",&ch);
+
+    if(ch>='A' && ch<='Z')
+    {
+        printf("Character is Uppercase");
+    }
+    else if(ch>='a' && ch<='z')
+    {
+        printf("Character is Lowercase");
+    }
+    else
+    {
+        printf("Invalid Character");
+    }
+
+    getch();
+}
+
+
+ 13) Input Three Values from user and Find Maximum.
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a,b,c;
+
+    clrscr();
+
+    printf("Enter first number: ");
+    scanf("%d",&a);
+
+    printf("Enter second number: ");
+    scanf("%d",&b);
+
+    printf("Enter third number: ");
+    scanf("%d",&c);
+
+    if(a>b && a>c)
+    {
+        printf("Maximum number = %d",a);
+    }
+    else if(b>a && b>c)
+    {
+        printf("Maximum number = %d",b);
+    }
+    else
+    {
+        printf("Maximum number = %d",c);
+    }
+
+    getch();
+}
+
+ 14) input Three Values from user and Find Minimum
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a,b,c;
+
+    clrscr();
+
+    printf("Enter first number: ");
+    scanf("%d",&a);
+
+    printf("Enter second number: ");
+    scanf("%d",&b);
+
+    printf("Enter third number: ");
+    scanf("%d",&c);
+
+    if(a<b && a<c)
+    {
+        printf("Minimum number = %d",a);
+    }
+    else if(b<a && b<c)
+    {
+        printf("Minimum number = %d",b);
+    }
+    else
+    {
+        printf("Minimum number = %d",c);
+    }
+
+    getch();
+}
+
+
+
+ 15)Input RollNumber, Marks of 5 Subjects and find out Total, Percentage, Result and Grade.
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int roll,m1,m2,m3,m4,m5,total;
+    float per;
+
+    clrscr();
+
+    printf("Enter Roll Number: ");
+    scanf("%d",&roll);
+
+    printf("Enter marks of 5 subjects: ");
+    scanf("%d%d%d%d%d",&m1,&m2,&m3,&m4,&m5);
+
+    total=m1+m2+m3+m4+m5;
+    per=total/5.0;
+
+    printf("\nRoll Number = %d",roll);
+    printf("\nTotal Marks = %d",total);
+    printf("\nPercentage = %.2f",per);
+
+    if(m1<35 || m2<35 || m3<35 || m4<35 || m5<35)
+    {
+        printf("\nResult = Fail");
+        printf("\nGrade = F");
+    }
+    else
+    {
+        printf("\nResult = Pass");
+
+        if(per>=90)
+            printf("\nGrade = A+");
+        else if(per>=80)
+            printf("\nGrade = A");
+        else if(per>=70)
+            printf("\nGrade = B");
+        else if(per>=60)
+            printf("\nGrade = C");
+        else if(per>=50)
+            printf("\nGrade = D");
+        else
+            printf("\nGrade = E");
+    }
+
+    getch();
+}
+
+ 16)  Input day in number and print in text(for Example input 1 then Output Monday)
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int day;
+
+    clrscr();
+
+    printf("Enter day number (1-7): ");
+    scanf("%d",&day);
+
+    switch(day)
+    {
+        case 1:
+            printf("Monday");
+            break;
+
+        case 2:
+            printf("Tuesday");
+            break;
+
+        case 3:
+            printf("Wednesday");
+            break;
+
+        case 4:
+            printf("Thursday");
+            break;
+
+        case 5:
+            printf("Friday");
+            break;
+
+        case 6:
+            printf("Saturday");
+            break;
+
+        case 7:
+            printf("Sunday");
+            break;
+
+        default:
+            printf("Invalid Day");
+    }
+
+    getch();
+}
+
+ 
+
+ 17) . Input Month in number and print in text(for example input 1 then output January)
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int month;
+
+    clrscr();
+
+    printf("Enter month number (1-12): ");
+    scanf("%d",&month);
+
+    switch(month)
+    {
+        case 1:
+            printf("January");
+            break;
+
+        case 2:
+            printf("February");
+            break;
+
+        case 3:
+            printf("March");
+            break;
+
+        case 4:
+            printf("April");
+            break;
+
+        case 5:
+            printf("May");
+            break;
+
+        case 6:
+            printf("June");
+            break;
+
+        case 7:
+            printf("July");
+            break;
+
+        case 8:
+            printf("August");
+            break;
+
+        case 9:
+            printf("September");
+            break;
+
+        case 10:
+            printf("October");
+            break;
+
+        case 11:
+            printf("November");
+            break;
+
+        case 12:
+            printf("December");
+            break;
+
+        default:
+            printf("Invalid Month");
+    }
+
+    getch();
+}
+
+ 
+
+ 18. Input number and check whether the number is
+positive, negative or zero.
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int num;
+
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    if(num>0)
+    {
+        printf("Number is Positive");
+    }
+    else if(num<0)
+    {
+        printf("Number is Negative");
+    }
+    else
+    {
+        printf("Number is Zero");
+    }
+
+    getch();
+}
+
+ 
+
+
+
